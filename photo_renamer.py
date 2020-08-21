@@ -1,8 +1,11 @@
 import os
-import sys
+# import sys
 import time
 import re
-import shutil
+# import shutil
+# import exifread
+# import json
+# import urllib.request
 
 # 获取当前模块路径
 path = os.getcwd()
@@ -13,7 +16,7 @@ extensions = ['.JPG', '.jpg', '.MOV', '.mov', '.mp4', '.MP4', '.PNG', '.png', 'G
 # 遍历路径下的所有文件和文件夹
 for root, dir, files in os.walk(path):
     for file in files:
-        
+
         # 获取文件创建时间
         full_path = os.path.join(root, file)
         mtime = os.stat(full_path).st_mtime
